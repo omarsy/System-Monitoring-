@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import feedparser
+
+d = feedparser.parse('http://www.cert.ssi.gouv.fr/site/cert-fr_alerte.rss')
+v=d.entries
+for ent in d.entries :
+	v=ent.title
+	print v
+	#u'Sample Feed'
+	v=ent.link
+	print v
+	#u'http://example.org/'
+	v=ent.description
+	print v
+
+#u'For documentation <em>only</em>'
+
